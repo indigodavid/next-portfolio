@@ -8,10 +8,10 @@ type Props = {}
 const Hero = (props: Props) => {
   const [text, count] = useTypewriter({
     words: [
-      "Hi, my name is David",
-      "In love with learning and coding",
-      "Enjoying life and remote work",
-      "Playing guitar and bass in my free time"
+      "Hi myName=\"David\"",
+      "Passions are={ learning && coding }",
+      "Enjoying life={maxValue} remoteWork={theBest}",
+      "Hobbies instruments=\"guitar bass\"",
     ],
     loop: true,
     delaySpeed: 2000,
@@ -26,10 +26,14 @@ const Hero = (props: Props) => {
         width={128}
         height={128}
       />
-      <h1 className="z-10">
-        <span>{text}</span>
+      <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[1rem]">Full Stack Developer</h2>
+      <h1 className="text-3xl lg:text-4xl font-semibold px-10 z-10">
+        {'<'}
+        <span className="mr-2">{text}</span>
         <Cursor cursorColor="#f7ab0a"/>
+        {'/>'}
       </h1>
+      
     </div>
   )
 }
