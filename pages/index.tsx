@@ -20,11 +20,13 @@ export default function Home() {
 
       {/* About */}
 
-      {/* About */}
+      {/* Experience */}
 
-      {/* About */}
+      {/* Skills */}
 
-      {/* About */}
+      {/* Projects */}
+
+      {/* Contact Me */}
 
     </div>
   )
