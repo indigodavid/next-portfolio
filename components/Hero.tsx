@@ -22,16 +22,18 @@ const Hero = (props: Props) => {
       <BackgroundCircles />
       <Image
         className="relative rounded-full h-32 w-32 mx-auto object-cover"
-        src="https://ik.imagekit.io/ezcar/DavidVeraPhoto_5z8yTJWa3.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1667585261673"
+        src="https://ik.imagekit.io/ezcar/DavidVeraNov2022_KDbSgVGgn.jpg"
         alt="David"
         width={128}
         height={128}
       />
       <div className="z-20">
-        <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[1rem]">Full Stack Developer</h2>
+        <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[1rem]">
+          Full Stack Developer
+        </h2>
         <h1 className="text-3xl lg:text-4xl font-semibold px-10">
           {'<'}
-          <span className="mr-2">{text}</span>
+          <span className="mr-2 font-mono">{text}</span>
           <Cursor cursorColor="#f7ab0a"/>
           {'/>'}
         </h1>
