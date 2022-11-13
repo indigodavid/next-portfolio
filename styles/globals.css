@@ -5,5 +5,8 @@
 @layer components {
   .heroButton {
     @apply px-6 py-2 border border-[#242424] rounded-full uppercase text-xs tracking-widest text-gray-500 transition-all hover:border-[#f7ab0a]/40 hover:text-[#f7ab0a]/40;
-  } 
+  }
+  .sectionHeader {
+    @apply absolute top-24 uppercase tracking-[1.25rem] text-gray-500 text-2xl;
+  }
 }
