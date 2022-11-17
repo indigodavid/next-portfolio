@@ -25,4 +25,4 @@ export default {
       validation: (Rule) => Rule.min(0).max(100),
     },
   ],
-}
+};
