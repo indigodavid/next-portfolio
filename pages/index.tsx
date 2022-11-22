@@ -1,3 +1,4 @@
+import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -8,8 +9,24 @@ import Hero from '../components/Hero'
 import Projects from '../components/Projects'
 import Skills from '../components/Skills'
 import WorkExperience from '../components/WorkExperience'
+import { Experience, PageInfo, Project, Skill, Social } from '../typings'
+import { fetchExperiences } from '../utils/fetchExperiences'
+import { fetchPageInfo } from '../utils/fetchPageInfo'
+import { fetchProjects } from '../utils/fetchProjects'
+import { fetchSkills } from '../utils/fetchSkills'
+import { fetchSocials } from '../utils/fetchSocials'
 
-export default function Home() {
+type Props = {
+  pageInfo: PageInfo;
+  experiences: Experience[];
+  skills: Skill[];
+  projects: Project[];
+  socials: Social[];
+};
+
+export default function Home(
+  { pageInfo, experiences, skills, projects, socials } : Props
+) {
   return (
     <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#f7ab0a]/80">
       <Head>
@@ -18,7 +35,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header />
+      <Header socials={socials} />
       {/* Hero */}
       <section id="hero" className="snap-start">
         <Hero />
@@ -66,3 +83,28 @@ export default function Home() {
     </div>
   )
 }
+
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  const pageInfoPromise = fetchPageInfo();
+  const experiencesPromise = fetchExperiences();
+  const projectsPromise = fetchProjects();
+  const skillsPromise = fetchSkills();
+  const socialsPromise = fetchSocials();
+
+  const pageInfo: PageInfo = await pageInfoPromise;
+  const experiences: Experience[] = await experiencesPromise;
+  const projects: Project[] = await projectsPromise;
+  const skills: Skill[] = await skillsPromise;
+  const socials: Social[] = await socialsPromise;
+
+  return {
+    props: {
+      pageInfo,
+      experiences,
+      projects,
+      skills,
+      socials,
+    },
+    revalidate: 10,
+  };
+};
