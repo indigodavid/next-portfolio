@@ -1,9 +1,13 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { PageInfo } from '../typings'
+import { urlFor } from '../sanity';
 
-type Props = {}
+type Props = {
+  pageInfo: PageInfo;
+};
 
-const About = (props: Props) => {
+const About = ({ pageInfo }: Props) => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -26,14 +30,14 @@ const About = (props: Props) => {
         transition={{ duration: 1.2 }}
         viewport={{ once: true }}
         className="-mb-20 flex-shrink-0 w-56 h-56 rounded-full object-cover md:mb-0 md:rounded-lg md:w-96 md:h-96 xl:w-[30rem] xl:h-auto"
-        src="https://ik.imagekit.io/ezcar/IMG_3082_Nx7B-1dYR.HEIC"
+        src={urlFor(pageInfo?.profilePic).url()}
       />
       <div className="space-y-10 px-0 md:px-10">
         <h4 className="text-4xl font-semibold">
           Here is a <span className="underline decoration-[#f7ab0a]/50">little</span> background
         </h4>
         <p className="text-sm">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt id iusto dolor, eos molestias neque vitae saepe eveniet cupiditate nihil temporibus reiciendis commodi esse ex explicabo architecto autem hic iure! Quidem ullam nulla recusandae similique tempore officia veritatis labore quisquam vero, nihil rem natus ipsam et debitis quo dignissimos asperiores!
+          {pageInfo.backgroundInformation}
         </p>
       </div>
     </motion.div>
