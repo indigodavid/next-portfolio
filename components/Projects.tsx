@@ -23,14 +23,14 @@ const Projects = ({ projects }: Props) => {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1.5 }}
             key={project._id}
-            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-3 items-center justify-center p-10 md:p-44 h-screen"
+            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-3 items-center justify-center mt-16 p-10 sm:mt-0 md:p-44 h-screen"
           >
             <motion.img
               initial={{
                 y: -100,
                 opacity: 0,
               }}
-              className="max-h-32"
+              className="max-h-32 md:max-h-60"
               transition={{ duration: 1.2 }}
               whileInView={{
                 opacity: 1,

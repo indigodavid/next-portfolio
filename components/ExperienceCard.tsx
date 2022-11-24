@@ -22,14 +22,14 @@ const ExperienceCard = ({ experience }: Props) => {
           opacity: 1,
         }}
         viewport={{ once: true }}
-        className="w-32 h-32 rounded-full xl:w-[13em] xl:h-[13em] object-cover object-center"
-        src={urlFor(experience.companyImage).url()}
+        className="w-24 h-24 rounded-full xl:w-[13em] xl:h-[13em] object-cover object-center"
+        src={urlFor(experience?.companyImage).url()}
       />
       <div className="px-0 container md:px-10">
-        <h4 className="text-4xl font-light">{experience.jobTitle}</h4>
-        <p className="font-bold text-2xl mt-1">{experience.company}</p>
+        <h4 className="text-2xl font-light">{experience?.jobTitle}</h4>
+        <p className="font-bold text-xl mt-1">{experience?.company}</p>
         <div className="flex space-x-2 my-2">
-          {experience.technologies.map((technology) => (
+          {experience?.technologies.map((technology) => (
             <Image
               key={technology._id}
               src={urlFor(technology.image).url()}
@@ -40,11 +40,11 @@ const ExperienceCard = ({ experience }: Props) => {
             />
           ))}
         </div>
-        <p className="uppercase py-5 text-gray-300">
-          {new Date(experience.dateStarted).toDateString()} - {experience.isCurrentlyWorkingHere ? 'Present' : new Date(experience.dateEnded).toDateString()}
+        <p className="uppercase py-3 text-gray-300">
+          {new Date(experience?.dateStarted).toDateString()} - {experience?.isCurrentlyWorkingHere ? 'Present' : new Date(experience?.dateEnded).toDateString()}
         </p>
-        <ul className="list-disc space-y-4 ml-5 text-lg max-h-96 overflow-y-scroll pr-5 scrollbar-thin scrollbar-track-black scrollbar-thumb-[#f7ab0a]/80">
-          {experience.points.map((point, index) => (
+        <ul className="list-disc space-y-4 ml-5 text-lg max-h-32 overflow-y-scroll pr-5 scrollbar-thin scrollbar-track-black scrollbar-thumb-[#f7ab0a]/80">
+          {experience?.points.map((point, index) => (
             <li key={index}>{point}</li>
           ))}
         </ul>

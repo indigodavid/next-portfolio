@@ -33,6 +33,7 @@ const Header = ({ socials }: Props) => {
             url={social.url}
             bgColor="transparent"
             fgColor="gray"
+            label={social.title}
           />
         ))}
       </motion.div>
