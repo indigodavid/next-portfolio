@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 import Image from 'next/image';
-import { Cursor, useTypewriter } from 'react-simple-typewriter'
-import BackgroundCircles from './BackgroundCircles';
+import { Cursor, useTypewriter } from 'react-simple-typewriter';
 import Link from 'next/link';
+import BackgroundCircles from './BackgroundCircles';
 import { PageInfo } from '../typings';
 import { urlFor } from '../sanity';
 
@@ -14,9 +14,9 @@ const Hero = ({ pageInfo }: Props) => {
   const [text, count] = useTypewriter({
     words: [
       `Hi myName={<${pageInfo?.name} />}`,
-      "Passions are={ learning && coding }",
-      "Enjoying life={maxValue} remoteWork={theBest}",
-      "Hobbies instruments=\"guitar bass\"",
+      'Passions are={ learning && coding }',
+      'Enjoying life={maxValue} remoteWork={theBest}',
+      'Hobbies instruments="guitar bass"',
     ],
     loop: true,
     delaySpeed: 2000,
@@ -38,7 +38,7 @@ const Hero = ({ pageInfo }: Props) => {
         <h1 className="text-3xl lg:text-4xl font-semibold px-10">
           {'<'}
           <span className="mr-2 font-mono">{text}</span>
-          <Cursor cursorColor="#f7ab0a"/>
+          <Cursor cursorColor="#f7ab0a" />
           {'/>'}
         </h1>
         <div className="pt-5">
@@ -57,7 +57,7 @@ const Hero = ({ pageInfo }: Props) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;
