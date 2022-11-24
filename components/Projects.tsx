@@ -47,7 +47,7 @@ const Projects = ({ projects }: Props) => (
                 {' '}
                 of
                 {' '}
-                {projects.length}
+                {projects?.length}
                 :
               </span>
               {' '}
@@ -57,9 +57,9 @@ const Projects = ({ projects }: Props) => (
               {project?.technologies.map((technology) => (
                 <Image
                   className="h-10 w-10 object-contain rounded-lg bg-white opacity-80"
-                  key={technology._id}
-                  src={urlFor(technology.image).url()}
-                  alt={technology.title}
+                  key={technology?._id}
+                  src={urlFor(technology?.image).url()}
+                  alt={technology?.title}
                   width={40}
                   height={40}
                 />

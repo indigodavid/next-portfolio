@@ -23,7 +23,7 @@ const Skills = ({ skills }: Props) => (
     </h3>
 
     <div className="grid grid-cols-4 gap-5">
-      {skills.sort((a, b) => (b.progress - a.progress)).map((skill, index) => (
+      {skills?.sort((a, b) => (b.progress - a.progress)).map((skill, index) => (
         <Skill key={skill._id} skill={skill} directionLeft={Math.floor(index / 4) % 2 === 0} />
       ))}
     </div>

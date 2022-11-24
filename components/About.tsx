@@ -40,7 +40,7 @@ const About = ({ pageInfo }: Props) => (
         background
       </h4>
       <p className="text-sm">
-        {pageInfo.backgroundInformation}
+        {pageInfo?.backgroundInformation}
       </p>
     </div>
   </motion.div>

@@ -24,19 +24,19 @@ const ContactMe = ({ pageInfo }: Props) => (
         <span className="underline decoration-[#f7ab0a]/50">Let&apos;s Talk.</span>
       </h4>
       <div>
-        <Link href={`sms:${pageInfo.phoneNumber}`}>
+        <Link href={`sms:${pageInfo?.phoneNumber}`}>
           <div className="flex items-center space-x-5 ml-2">
             <PhoneIcon className="text-[#f7ab0a] h-7 w-7 animate-pulse" />
-            <p>{pageInfo.phoneNumber}</p>
+            <p>{pageInfo?.phoneNumber}</p>
           </div>
         </Link>
       </div>
 
       <div>
-        <Link href={`mailto:${pageInfo.email}`}>
+        <Link href={`mailto:${pageInfo?.email}`}>
           <div className="flex items-center space-x-5 ml-2">
             <EnvelopeIcon className="text-[#f7ab0a] h-7 w-7 animate-pulse" />
-            <p>{pageInfo.email}</p>
+            <p>{pageInfo?.email}</p>
           </div>
         </Link>
       </div>
@@ -44,11 +44,11 @@ const ContactMe = ({ pageInfo }: Props) => (
       <div>
         <div className="flex items-center space-x-5 ml-2">
           <MapPinIcon className="text-[#f7ab0a] h-7 w-7 animate-pulse" />
-          <p>{pageInfo.address}</p>
+          <p>{pageInfo?.address}</p>
         </div>
       </div>
 
-      <form action={pageInfo.formHandler} method="POST" className="flex flex-col space-y-2 w-fit mx-auto">
+      <form action={pageInfo?.formHandler} method="POST" className="flex flex-col space-y-2 w-fit mx-auto">
         <div className="flex flex-col gap-2 sm:flex-row">
           <input
             placeholder="Name"
