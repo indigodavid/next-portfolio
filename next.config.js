@@ -9,8 +9,13 @@ const nextConfig = {
         hostname: '**.imagekit.io',
         pathname: '/ezcar/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'cdn.sanity.io',
+        pathname: '/images/**',
+      },
     ],
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
