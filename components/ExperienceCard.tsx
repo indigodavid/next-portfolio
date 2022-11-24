@@ -10,7 +10,7 @@ type Props = {
 
 const ExperienceCard = ({ experience }: Props) => {
   return (
-    <article className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 container md:w-[38em] xl:w-[56em] snap-center bg-[#292929] p-10 hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200">
+    <article className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 container md:w-[38em] xl:w-[56em] snap-center bg-[#292929] p-5 sm:p-10 hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200">
       <motion.img
         initial={{
           y: -100,
@@ -22,7 +22,7 @@ const ExperienceCard = ({ experience }: Props) => {
           opacity: 1,
         }}
         viewport={{ once: true }}
-        className="w-24 h-24 rounded-full xl:w-[13em] xl:h-[13em] object-cover object-center"
+        className="w-24 h-24 rounded-full xl:w-32 xl:h-32 object-cover object-center"
         src={urlFor(experience?.companyImage).url()}
       />
       <div className="px-0 container md:px-10">

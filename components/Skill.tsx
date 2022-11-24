@@ -1,11 +1,11 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Skill } from '../typings';
+import { Skill as SkillType } from '../typings';
 import { urlFor } from '../sanity';
 
 type Props = {
   directionLeft?: boolean;
-  skill: Skill;
+  skill: SkillType;
 };
 
 const Skill = ({ skill, directionLeft }: Props) => {
