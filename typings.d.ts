@@ -53,6 +53,7 @@ export interface PageInfo extends SanityBody {
   name: string;
   phoneNumber: string;
   profilePic: Image;
+  formHandler: string;
 }
 
 export interface Experience extends SanityBody {
