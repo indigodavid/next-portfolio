@@ -35,7 +35,7 @@ const About = ({ pageInfo }: Props) => (
       <h4 className="text-xl sm:text-4xl font-semibold">
         Here is a
         {' '}
-        <span className="underline decoration-[#f7ab0a]/50">little</span>
+        <span className="underline decoration-accent/50">little</span>
         {' '}
         background
       </h4>
