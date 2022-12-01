@@ -21,7 +21,7 @@ const ExperienceCard = ({ experience }: Props) => (
         opacity: 1,
       }}
       viewport={{ once: true }}
-      className="w-24 h-24 rounded-full xl:w-32 xl:h-32 object-cover object-center"
+      className="w-24 h-24 rounded-full xl:w-32 xl:h-32 object-contain object-center"
       src={urlFor(experience?.companyImage).url()}
     />
     <div className="px-0 container md:px-10">
@@ -32,7 +32,7 @@ const ExperienceCard = ({ experience }: Props) => (
           <Image
             key={technology?._id}
             src={urlFor(technology?.image).url()}
-            className="h-10 w-10 rounded-full"
+            className="h-10 w-10 rounded-full object-contain"
             alt={technology?.title}
             width={40}
             height={40}
