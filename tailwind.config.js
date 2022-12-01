@@ -6,7 +6,11 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        accent: process.env.NEXT_PUBLIC_THEME_COLOR,
+      }
+    },
   },
   plugins: [
     require('tailwind-scrollbar'),
