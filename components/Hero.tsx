@@ -38,7 +38,7 @@ const Hero = ({ pageInfo }: Props) => {
         <h1 className="text-3xl lg:text-4xl font-semibold px-10">
           {'<'}
           <span className="mr-2 font-mono">{text}</span>
-          <Cursor cursorColor="#f7ab0a" />
+          <Cursor cursorColor={process.env.NEXT_PUBLIC_THEME_COLOR} />
           {'/>'}
         </h1>
         <div className="pt-5">
