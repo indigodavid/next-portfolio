@@ -14,7 +14,7 @@ const Projects = ({ projects }: Props) => (
     <h3 className="sectionHeader">
       Projects
     </h3>
-    <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-track-gray-400/20 scrollbar-thumb-[#f7ab0a]/80 scrollbar-thin">
+    <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-track-gray-400/20 scrollbar-thumb-accent/80 scrollbar-thin">
       {projects?.map((project, i) => (
         <motion.div
           initial={{ opacity: 0 }}
@@ -40,7 +40,7 @@ const Projects = ({ projects }: Props) => (
           />
           <div className="space-y-3 px-0 md:px-10 max-w-6xl">
             <h4 className="text-2xl font-semibold text-center">
-              <span className="hidden sm:inline underline decoration-[#f7ab0a]/50">
+              <span className="hidden sm:inline underline decoration-accent/50">
                 Case Study
                 {' '}
                 {i + 1}
@@ -65,7 +65,7 @@ const Projects = ({ projects }: Props) => (
                 />
               ))}
             </div>
-            <div className="text-sm text-center md:text-left max-h-32 overflow-y-scroll scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#f7ab0a]/80">
+            <div className="text-sm text-center md:text-left max-h-32 overflow-y-scroll scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-accent/80">
               {project?.summary}
             </div>
             <div className="flex justify-end gap-4">
@@ -88,7 +88,7 @@ const Projects = ({ projects }: Props) => (
       ))}
 
     </div>
-    <div className="w-full absolute top-[30%] bg-[#f7ab0a]/10 left-0 h-[31em] -skew-y-12" />
+    <div className="w-full absolute top-[30%] bg-accent/10 left-0 h-[31em] -skew-y-12" />
   </div>
 );
 
