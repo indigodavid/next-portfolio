@@ -21,12 +21,12 @@ const ContactMe = ({ pageInfo }: Props) => (
       <h4 className="text-lg sm:text-2xl font-semibold text-center">
         I am always interested in new projects.
         {' '}
-        <span className="underline decoration-[#f7ab0a]/50">Let&apos;s Talk.</span>
+        <span className="underline decoration-accent/50">Let&apos;s Talk.</span>
       </h4>
       <div>
         <Link href={`sms:${pageInfo?.phoneNumber}`}>
           <div className="flex items-center space-x-5 ml-2">
-            <PhoneIcon className="text-[#f7ab0a] h-7 w-7 animate-pulse" />
+            <PhoneIcon className="text-accent h-7 w-7 animate-pulse" />
             <p>{pageInfo?.phoneNumber}</p>
           </div>
         </Link>
@@ -35,7 +35,7 @@ const ContactMe = ({ pageInfo }: Props) => (
       <div>
         <Link href={`mailto:${pageInfo?.email}`}>
           <div className="flex items-center space-x-5 ml-2">
-            <EnvelopeIcon className="text-[#f7ab0a] h-7 w-7 animate-pulse" />
+            <EnvelopeIcon className="text-accent h-7 w-7 animate-pulse" />
             <p>{pageInfo?.email}</p>
           </div>
         </Link>
@@ -43,7 +43,7 @@ const ContactMe = ({ pageInfo }: Props) => (
 
       <div>
         <div className="flex items-center space-x-5 ml-2">
-          <MapPinIcon className="text-[#f7ab0a] h-7 w-7 animate-pulse" />
+          <MapPinIcon className="text-accent h-7 w-7 animate-pulse" />
           <p>{pageInfo?.address}</p>
         </div>
       </div>
@@ -84,7 +84,7 @@ const ContactMe = ({ pageInfo }: Props) => (
           required
         />
         <button
-          className="bg-[#f7ab0a] py-4 px-10 rounded-md text-black font-bold text-lg"
+          className="bg-accent py-4 px-10 rounded-md text-black font-bold text-lg"
           type="submit"
         >
           Submit
