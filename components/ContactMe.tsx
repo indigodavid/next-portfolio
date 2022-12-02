@@ -58,6 +58,7 @@ const ContactMe = ({ pageInfo }: Props) => (
             id="name"
             required
           />
+          <label htmlFor="name" className="hidden">Name</label>
           <input
             placeholder="Email"
             className="contactInput"
@@ -66,6 +67,7 @@ const ContactMe = ({ pageInfo }: Props) => (
             id="email"
             required
           />
+          <label htmlFor="email" className="hidden">Email</label>
         </div>
 
         <input
@@ -75,6 +77,7 @@ const ContactMe = ({ pageInfo }: Props) => (
           name="subject"
           id="subject"
         />
+        <label htmlFor="subject" className="hidden">Subject</label>
 
         <textarea
           placeholder="Message"
@@ -83,6 +86,7 @@ const ContactMe = ({ pageInfo }: Props) => (
           id="message"
           required
         />
+        <label htmlFor="message" className="hidden">Message</label>
         <button
           className="bg-accent py-4 px-10 rounded-md text-black font-bold text-lg"
           type="submit"
