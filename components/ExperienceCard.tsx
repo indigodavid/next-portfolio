@@ -33,7 +33,7 @@ const ExperienceCard = ({ experience }: Props) => (
           <Image
             key={technology?._id}
             src={urlFor(technology?.image).url()}
-            className="h-10 w-10 rounded-full object-contain"
+            className="h-10 w-10 rounded-lg bg-white object-contain"
             alt={technology?.title}
             width={40}
             height={40}
