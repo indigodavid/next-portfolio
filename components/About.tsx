@@ -30,6 +30,7 @@ const About = ({ pageInfo }: Props) => (
       viewport={{ once: true }}
       className="-mb-12 mt-24 flex-shrink-0 w-32 h-32 rounded-full object-cover md:mb-0 md:rounded-lg md:w-96 md:h-96 xl:w-[30rem] xl:h-auto"
       src={urlFor(pageInfo?.profilePic).url()}
+      alt="Enjoying life"
     />
     <div className="space-y-2 sm:space-x-10 px-0 md:px-10">
       <h4 className="text-xl sm:text-4xl font-semibold">
