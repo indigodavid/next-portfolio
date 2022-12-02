@@ -13,10 +13,10 @@ type Props = {
 const Hero = ({ pageInfo }: Props) => {
   const [text, count] = useTypewriter({
     words: [
-      `Hi myName={<${pageInfo?.name} />}`,
-      'Passions are={ learning && coding }',
-      'Enjoying life={maxValue} remoteWork={theBest}',
-      'Hobbies instruments="guitar bass"',
+      `Hi myName={<${pageInfo?.name.split(' ')[0]} />}`,
+      'Passion is={coding: true}',
+      'Enjoying life={maxValue}',
+      'Hobbies play="guitar bass"',
     ],
     loop: true,
     delaySpeed: 2000,
