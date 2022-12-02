@@ -4,7 +4,7 @@
 
 @layer components {
   .heroButton {
-    @apply px-6 py-2 border border-[#242424] rounded-full uppercase text-xs tracking-widest text-gray-500 transition-all hover:border-accent/40 hover:text-accent/40;
+    @apply px-6 py-2 border border-[#242424] rounded-full uppercase text-xs tracking-widest text-gray-300 transition-all hover:border-accent/40 hover:text-accent/40;
   }
 
   .sectionHeader {
