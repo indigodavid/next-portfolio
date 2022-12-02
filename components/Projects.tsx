@@ -53,16 +53,22 @@ const Projects = ({ projects }: Props) => (
               {' '}
               {project?.title}
             </h4>
-            <div className="flex items-center space-x-2 justify-center">
+            <div className="flex items-center space-x-4 justify-center">
               {project?.technologies.map((technology) => (
-                <Image
-                  className="h-10 w-10 object-contain rounded-lg bg-white opacity-80"
-                  key={technology?._id}
-                  src={urlFor(technology?.image).url()}
-                  alt={technology?.title}
-                  width={40}
-                  height={40}
-                />
+                <div key={technology?._id} className="relative group flex">
+                  <Image
+                    className="h-10 w-10 object-contain rounded-lg bg-white opacity-80 filter group-hover:grayscale transition duration-300 ease-in-out"
+                    src={urlFor(technology?.image).url()}
+                    alt={technology?.title}
+                    width={40}
+                    height={40}
+                  />
+                  <div className="absolute opacity-0 group-hover:opacity-80 transition duration-300 ease-in-out group-hover:bg-slate-700 w-10 h-10 rounded-lg z-0">
+                    <div className="flex items-center justify-center h-full">
+                      <p className="text-xs font-bold text-white opacity-100">{technology?.title}</p>
+                    </div>
+                  </div>
+                </div>
               ))}
             </div>
             <div className="text-sm text-center md:text-left max-h-32 overflow-y-scroll scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-accent/80">
