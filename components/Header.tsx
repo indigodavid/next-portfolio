@@ -34,6 +34,8 @@ const Header = ({ socials }: Props) => (
           bgColor="transparent"
           fgColor="gray"
           label={social.title}
+          target="_blank"
+          rel="noopener"
         />
       ))}
     </motion.div>
