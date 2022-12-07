@@ -240,7 +240,7 @@ If you like this project DM me at david.verac@hotmail.com.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank [Sonny Sangha](https://github.com/sonnysangha) whose tutorial Youtube inspired this project.
+I would like to thank [Sonny Sangha](https://github.com/sonnysangha) whose Youtube tutorial inspired this project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
